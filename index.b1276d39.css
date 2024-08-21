@@ -1,0 +1,89 @@
+html {
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.people {
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 30px;
+  max-width: 430px;
+  margin: 30px auto 0;
+  display: grid;
+}
+
+@media (width >= 768px) {
+  .people {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+  }
+}
+
+.people__person {
+  width: 200px;
+  transition: transform .5s, background-color .5s;
+  position: relative;
+}
+
+.people__person:hover {
+  background-color: #eee;
+  padding: 10px 10px 16px;
+  transform: scale(1.2);
+}
+
+.people__person:hover .person__details .details__extra {
+  font-size: 21.6px;
+  line-height: 24.84px;
+  transition: opacity;
+  display: block;
+}
+
+.people__person .person__photo {
+  position: relative;
+}
+
+.people__person .person__photo .photo__image {
+  border-radius: 200px;
+  width: 200px;
+}
+
+.people__person .person__photo .photo__rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 200px;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 18.4px;
+  display: flex;
+  position: absolute;
+  top: 84px;
+  right: 10px;
+}
+
+.people__person .person__details .details__name {
+  color: #2f4f4f;
+  text-align: center;
+}
+
+.people__person .person__details .details__extra {
+  opacity: 0;
+  z-index: 15;
+  transition: opacity;
+  display: none;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
